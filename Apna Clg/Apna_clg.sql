@@ -20,6 +20,15 @@ Select * from student;
 SHOW DATABASES;
 SHOW TABLES;
 
+Create Table Emp (
+	id int,
+    salary int default 25000);
+    
+insert into Emp (id) values (101);
+select * from Emp;
+
+###################################3
+
 INSERT INTO list
 (id, name, age) 		-- parameters as decided. this is imp.
 values
@@ -30,14 +39,9 @@ select * from list;
 
 
 
-Create Table Emp (
-	id int,
-    salary int default 25000);
-    
-insert into Emp (id) values (101);
-select * from Emp;
+#1.50
 
-#1.12
+
 
 
 
