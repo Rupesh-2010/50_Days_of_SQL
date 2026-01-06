@@ -37,11 +37,21 @@ values
 (103, "F",8);
 select * from list;
 
+## Foreign key
 
+CREATE TABLE Depta(
+	id INT PRIMARY KEY,
+    NAME VARCHAR(50)
+);
 
-#1.50
-
-
+CREATE TABLE Teacher(
+	roll_num INT PRIMARY KEY,
+    NAME VARCHAR(50),
+    dept_id int,
+    foreign key(dept_id) references Depta(roll_num)
+    on update cascade #if changes in table it will automaticlly changes in another table.
+    on delete cascade #if delete in table it will automaticlly delete in another table.
+);
 
 
 
