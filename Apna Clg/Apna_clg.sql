@@ -84,6 +84,18 @@ UPDATE student			#Update the age in the column.
 set Age = 98
 WHERE id = 3;
 
+############################# Joints
+
+2.24
+
+
+
+
+
+
+
+
+
 
 
 
