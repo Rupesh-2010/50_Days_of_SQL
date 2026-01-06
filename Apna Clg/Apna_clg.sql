@@ -53,16 +53,36 @@ CREATE TABLE Teacher(
     on delete cascade #if delete in table it will automaticlly delete in another table.
 );
 
+#############################Table related Queries- alter
 
+SELECT * FROM student;
 
+alter table student
+add column Marks int;  # add column in a table
 
+alter table student
+drop column marks;		#delete the table.
 
+alter table student
+RENAME TO stud;			# Rename the table name.
 
+alter table stud
+RENAME TO student;		# Rename the table name.
 
+alter table student
+change column age Age int;			#Change the column name in the table. 
 
+SELECT * FROM student;
 
+alter table student
+modify column Age varchar(2);		#CHANGEING THE CONSTRAINT.
 
+insert into student
+values(3,"AP",98); 
 
+UPDATE student			#Update the age in the column. 
+set Age = 98
+WHERE id = 3;
 
 
 
