@@ -113,7 +113,45 @@ inner join Course
 on student.id = Course.id;   #Inner joiin # now wee'll get only 2 id, coz 3rd id is 10 not 10
 									# (we update the id above.)
 
-			
+			# Left Join.
+		# it return all the Rows from left table and from right table only matching values are return 
+        # if there no one is matching from right table than it return the NULL. 
+	
+select *
+FROM student as S
+LEFT JOIN course as C
+ON S.id = C.id;
+
+select *
+FROM course as C
+LEFT JOIN student as S		#         # if there no one is matching from right table than it return the NULL. 
+ON C.id = S.id;
+
+			# Right Join.
+		# it return all the Rows from Right table and from left table only matching values are return 
+        # if there no one is matching from left table than it return the NULL. 
+	
+select *
+FROM student as S
+RIGHT JOIN course as C
+ON S.id = C.id;
+
+			# FULL JOIN. 
+            
+SELECT * 
+FROM student as S
+LEFT JOIN course as C
+ON S.id = C.id
+union			#FOR FULLL JOIN. 
+SELECT * 
+FROM student as S
+RIGHT JOIN course as C
+ON S.id = C.id
+
+
+2.53
+
+
 
 
 
