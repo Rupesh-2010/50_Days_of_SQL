@@ -85,6 +85,8 @@ set Age = 98
 WHERE id = 3;
 
 ############################# Joints
+/*
+
 
 # inner join.
 # Retrun the records that have matching values in both tables.
@@ -137,7 +139,7 @@ RIGHT JOIN course as C
 ON S.id = C.id;
 
 			# FULL JOIN. 
-            
+          
 SELECT * 
 FROM student as S
 LEFT JOIN course as C
@@ -148,10 +150,33 @@ FROM student as S
 RIGHT JOIN course as C
 ON S.id = C.id
 
+*/
+			#SUB QUERIES.
+/*
+select * from course;
+            
+select id
+from course
+where id % 2 = 0;
+        
+select course
+from course
+where id in (1,3,10);
+            
+select course
+from course
+where id in (			#this  is subQueries (Queri in Queries.)
+	select id
+	from course
+	where id % 2 = 0);
+*/
 
-2.53
+						# MySQL View 
+                       # it is a virtual view, not a real table.
+CREATE view V1 as
+select Full_Name, Age from student;		#create view name is V1
 
-
+select * from V1;		#showing up V1 view
 
 
 
