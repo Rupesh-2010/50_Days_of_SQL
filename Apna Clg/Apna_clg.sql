@@ -86,13 +86,34 @@ WHERE id = 3;
 
 ############################# Joints
 
-2.24
+# inner join.
+# Retrun the records that have matching values in both tables.
+
+create table Course(
+	id int primary key,
+    course varchar(40)
+);
+
+insert into Course
+values (1, "Engllish"), (2, "Maths"), (3, "Sci");  #updated cousre id = 3 to 10.
+insert into Course values (3, "CS");
+
+update Course
+SET id = 10			# update the course id 3 to 10
+where id = 3;
 
 
+select * from student;
+select * from Course;
 
 
+select *
+from student
+inner join Course
+on student.id = Course.id;   #Inner joiin # now wee'll get only 2 id, coz 3rd id is 10 not 10
+									# (we update the id above.)
 
-
+			
 
 
 
